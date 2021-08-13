@@ -1,0 +1,28 @@
+{% extends 'user/base.html' %}
+{% block content %}
+   <div class="col-12 col-md-12 col-xl-12 home1">
+      <h1 class='text-center'> Hi {{ request.user.username }} , Welcome  <h1>
+   </div>
+      
+         {% if request.user.is_authenticated %}
+         
+         
+         {% for post in myposts  %}
+
+            <div class="card  text-white m-5 " style="width: 20rem;">
+               <div class="card-body">
+                  <h5 class="card-title">Post</h5>
+                  <p class="card-text">{{ post.text }}</p>
+                  <p  class="">Created At {{ post.created_at }}</p>
+                  <p  class="">Updated At {{ post.updated_at }}</p>
+               </div>
+            </div>
+      
+
+      {% endfor %}
+      {% else %}
+      <p class="my-5 bg-dark px-5 py-3">To create post firstly sign up and log in.</p>
+      
+      {% endif %}
+
+{% endblock content %}

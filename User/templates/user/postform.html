@@ -1,0 +1,18 @@
+{% extends 'user/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class='container d-flex justify-content-center mt-5'>
+
+    <form action={% url 'post' %} method='POST' > 
+        {% csrf_token %}
+       <div > 
+        <div class=''>
+                {{PostForm.as_p}}
+                <input class='btn btn btn-primary' type='Submit' value='Post Here'/>
+            </div>
+        </div>
+    <form/>
+</div>
+
+{% endblock content %}

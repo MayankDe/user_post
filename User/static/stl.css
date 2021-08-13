@@ -1,0 +1,14 @@
+body{
+    background-color: black;
+    color: antiquewhite;
+}
+.form-control{
+    background-color: rosybrown;
+}
+.card{
+    background: linear-gradient(to bottom, #568b9c 0%, #580a31 100%);
+    color: white;
+}
+div.home1{
+    color: darkkhaki;
+}
